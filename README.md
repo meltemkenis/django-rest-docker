@@ -9,7 +9,7 @@ sudo docker-compose up
 ```
 
 To list posts:
-(http://0.0.0.0:8000/post/api/list)
+http://0.0.0.0:8000/post/api/list
 
 For updating, deleting or commenting one should first register the app. After creating a superuser or user visit:
-(http://0.0.0.0:8000/admin)
+http://0.0.0.0:8000/admin
