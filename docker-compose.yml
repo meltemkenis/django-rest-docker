@@ -24,7 +24,7 @@ services:
             - djangoapp
         networks:
             - nginx_network
-    
+
     databasepostgresql:
         image: postgres:10
         env_file:
@@ -32,7 +32,7 @@ services:
         networks:
             - databasepostgresql_network
         volumes:
-        - databasepostgresql_volume:/var/lib/postgresql/data
+            - databasepostgresql_volume:/var/lib/postgresql/data
             
 networks:
     nginx_network:
