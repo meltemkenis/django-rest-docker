@@ -5,11 +5,23 @@ To enter this application, to list, create, delete or update some posts or comme
 
 To raise it:
 ```
+sudo docker-compose build
 sudo docker-compose up
 ```
 
 To list posts:
 http://0.0.0.0:8000/post/api/list
 
-For updating, deleting or commenting one should first register the app. After creating a superuser or user visit:
+For updating, deleting or commenting one should first register the app. To create a superuser:
+```
+sudo docker ps -a
+```
+Choose the container id belongs to server_djangoapp and: 
+```
+django-rest % docker exec -it <paste_id_here> /bin/bash
+cd django-rest
+python ./manage.py createsuperuser
+```
+
+After creating a superuser or user visit:
 http://0.0.0.0:8000/admin
