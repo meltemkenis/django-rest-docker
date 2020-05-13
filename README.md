@@ -18,7 +18,7 @@ sudo docker ps -a
 ```
 Choose the container id belongs to server_djangoapp and: 
 ```
-django-rest % docker exec -it <paste_id_here> /bin/bash
+docker exec -it <paste_id_here> /bin/bash
 cd django-rest
 python ./manage.py createsuperuser
 ```
